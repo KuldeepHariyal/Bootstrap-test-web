@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding: var(--scroll-padding, 5rem);
+}
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #333;
+  --navbar-bg-color: transparent;
+  --footer-bg-color: #f8f9fa;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url(./assets/alif-ngoylung-jg-6ARMiaPM-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+#navbar {
+  background-color: var(--navbar-bg-color);
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: background-color 0.3s ease;
+}
+
+#navbar.scrolled {
+  background-color: var(--secondary-color);
+}
+
+.content {
+  margin-top: 100px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-right: 20px;
+}
+
+.photo-gallery img {
+  width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 30px 0;
+}
+
+/* Testimonial Slider */
+.testimonial-item {
+  text-align: center;
+}
+
+#about {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#about h2 {
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+
+#about p {
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.swiper-container {
+  position: relative;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+
+.swiper-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.swiper-slide {
+  width: calc(33.33% - 20px);
+  padding: 10px;
+  display: grid !important;
+  place-items: center !important;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-images {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary-color);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.gallery-images img {
+  width: 100%;
+  height: 300px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  font-weight: 700;
+  background-color: var(--secondary-color);
+  padding: 30px;
+  color: var(--primary-color) !important;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--secondary-color) !important;
+}
+
+.footer {
+  background-color: var(--footer-bg-color);
+  padding: 20px 0;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
